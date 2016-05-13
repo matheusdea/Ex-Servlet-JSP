@@ -3,7 +3,7 @@
 <head>
 	<title>IMC</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="bots.css"/>
+	<link rel="stylesheet" href="css/bots.css"/>
 </head>
 
 <body>
@@ -29,8 +29,8 @@
     <div class="form-group">
       <label class="control-label" for="inputSmall">Sexo:</label>
      <select class="form-control" name="selectsexo">
-		  <option value="1">Masculino</option>
-		  <option value="2">Feminino</option>
+		  <option value="0">Masculino</option>
+		  <option value="1">Feminino</option>
 		</select>
 	  </div>
 
@@ -41,66 +41,8 @@
       </div>
     </div>
 
-
-
-	<%
-
-		String pesoStr = request.getParameter("peso");
-		if(pesoStr == null) {
-			pesoStr = "0";
-		}
-		Double pesoD = Double.parseDouble(pesoStr);
-		
-		String alturaStr = request.getParameter("altura");
-		if(alturaStr == null) {
-			alturaStr = "0";
-		}
-		Double alturaD = Double.parseDouble(alturaStr);
-		
-		String sexoStr = request.getParameter("selectsexo");
-		if(sexoStr == null) {
-			sexoStr = "1";
-		}
-		int sexo = Integer.parseInt(sexoStr);
-		
-		
-		
-		Double imc=pesoD/((alturaD*alturaD)/10000);
-		
-	%>
-
-
      <div class="form-group">
-     <h2>Resustado: 
-     
-     <% if(sexo==1) {
-				if(imc<20.7){
-					out.println("Abaixo do peso ideal!\nIMC: "+imc);
-				} else if(imc>20.8&&imc<26.4) {
-					out.println("Peso normal!\nIMC: "+imc);
-				} else if(imc>26.4&&imc<27.8) {
-					out.println("Marginalmente acima do peso!\nIMC: "+imc);
-				} else if(imc>=27.8&&imc<=31.1) {
-					out.println("Acima do peso ideal!\nIMC: "+imc);
-				} else if(imc>31.1) {
-					out.println("Obeso!\nIMC: "+imc);
-				}
-			}else if(sexo==2) {
-				if(imc<19.1){
-					out.println("Abaixo do peso ideal!\nIMC: "+imc);
-				} else if(imc>=19.1&&imc<=25.8) {
-					out.println("Peso normal!\nIMC: "+imc);
-				} else if(imc>=25.9&&imc<=27.3) {
-					out.println("Marginalmente acima do peso!\nIMC: "+imc);
-				} else if(imc>=27.4&&imc<=32.3) {
-					out.println("Acima do peso ideal!\nIMC: "+imc);
-				} else if(imc>32.3) {
-					out.println("Obeso!\nIMC: "+imc);
-				}
-			}
-	%>
-	
-	 </h2>     
+     <h2>Resustado: ${resultado} </h2>     
      </div>
     
   </fieldset>
