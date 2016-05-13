@@ -15,18 +15,18 @@
   <fieldset>
     <legend><h1>IMC</h1></legend>
     
-    <div class="form-group">
+    <div class="form-group col-lg-12">
 		<label class="control-label" for="inputSmall">Peso(kg):</label>
-		<input class="form-control input-sm" type="text" id="peso" name="peso">
+		<input class="form-control input-sm col-lg-5" type="text" id="peso" name="peso">
 	</div>
 
-	<div class="form-group">
+	<div class="form-group col-lg-12">
 		<label class="control-label" for="inputSmall">Altura(cm):</label>
 		<input class="form-control input-sm" type="text" id="altura" name="altura">
 	</div>
     
     
-    <div class="form-group">
+    <div class="form-group col-lg-12">
       <label class="control-label" for="inputSmall">Sexo:</label>
      <select class="form-control" name="selectsexo">
 		  <option value="0">Masculino</option>
@@ -41,8 +41,8 @@
       </div>
     </div>
 
-     <div class="form-group">
-     <h2>Resustado: ${resultado} </h2>     
+     <div class="form-group col-lg-12">
+     <h2>Resustado: </h2> <h2>${resultado}</h2>    
      </div>
     
   </fieldset>
@@ -50,7 +50,7 @@
 
 	<table class="table table-striped table-hover">
 				<tbody>
-				<tr ><th>Condição</th><th>IMC em Mulheres</th><th>IMC em Homens</th></tr>
+				<tr ><th>Condicao</th><th>IMC em Mulheres</th><th>IMC em Homens</th></tr>
 				<tr><td>abaixo do peso</td><td>&lt; 19,1</td><td>&lt; 20,7</td></tr>
 				<tr><td>no peso normal</td><td>19,1 - 25,8</td><td>20,7 - 26,4</td></tr>
 				<tr><td>marginalmente acima do peso</td><td>25,8 - 27,3</td><td>26,4 - 27,8</td></tr>

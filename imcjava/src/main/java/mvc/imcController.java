@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/IMC")
+@SuppressWarnings("serial")
+@WebServlet("/imc")
 public class imcController extends HttpServlet {
-
 
 	private String valor(HttpServletRequest req, String param, String padrao) {
 		String pesoStr = req.getParameter(param);
